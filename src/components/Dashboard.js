@@ -6,6 +6,7 @@ import { auth, db, logout } from ".././firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
 import { Navbar, Nav } from "react-bootstrap";
 import { Container } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 function Dashboard() {
     const [user, loading] = useAuthState(auth);
@@ -37,7 +38,10 @@ function Dashboard() {
             <Navbar fixed="top" bg="light" variant="light">
                 <Container>
                     <Navbar.Brand href="/dashboard">CorporateHomez</Navbar.Brand>
-                    <Nav.Link onClick={logout} >Sign Out</Nav.Link>
+                    <Nav.Link href="">Browse Listings</Nav.Link>
+                    <Nav.Link href="">Create Listing</Nav.Link>
+                    <Nav.Link href="">My Profile</Nav.Link>
+                    <Button variant="outline-primary" onClick={logout}>Sign Out</Button>
                 </Container>
             </Navbar>
             <br></br>
