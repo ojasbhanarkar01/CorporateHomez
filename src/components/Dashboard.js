@@ -40,16 +40,15 @@ function Dashboard() {
                     <Navbar.Brand href="/dashboard">CorporateHomez</Navbar.Brand>
                     <Nav.Link href="">Browse Listings</Nav.Link>
                     <Nav.Link href="">Create Listing</Nav.Link>
-                    <Nav.Link href="">My Profile</Nav.Link>
+                    <Nav.Link href="/profile">My Profile</Nav.Link>
                     <Button variant="outline-primary" onClick={logout}>Sign Out</Button>
                 </Container>
             </Navbar>
             <br></br>
             <br></br>
             <div className="dashboard__container">
-                Welcome,
+                Welcome to the dashboard,
                 <div>{name}</div>
-                <div>{user?.email}</div>
             </div>
         </div>
     );
