@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
-import "./Profile.css";
+import "./Browse.css";
 import { auth, db, logout } from ".././firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
 import { Navbar, Nav } from "react-bootstrap";
 import { Container } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 
-function Profile() {
+function Browse() {
     const [user, loading] = useAuthState(auth);
     const [name, setName] = useState("");
     const navigate = useNavigate();
@@ -46,13 +46,12 @@ function Profile() {
             </Navbar>
             <br></br>
             <br></br>
-            <div className="dashboard__container">
-                My Profile:
-                <div>{name}</div>
-                <div>{user?.email}</div>
+            <br></br>
+            <div>
+                Browse Listings
             </div>
         </div>
     );
 }
 
-export default Profile;
+export default Browse;

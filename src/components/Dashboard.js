@@ -38,8 +38,8 @@ function Dashboard() {
             <Navbar fixed="top" bg="light" variant="light">
                 <Container>
                     <Navbar.Brand href="/dashboard">CorporateHomez</Navbar.Brand>
-                    <Nav.Link href="">Browse Listings</Nav.Link>
-                    <Nav.Link href="">Create Listing</Nav.Link>
+                    <Nav.Link href="/browse">Browse Listings</Nav.Link>
+                    <Nav.Link href="/create">Create Listing</Nav.Link>
                     <Nav.Link href="/profile">My Profile</Nav.Link>
                     <Button variant="outline-primary" onClick={logout}>Sign Out</Button>
                 </Container>
